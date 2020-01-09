@@ -1,2 +1,34 @@
+baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
+url: "http://simeonbabatunde.com" # the base hostname & protocol for your site
+title: "Simeon Babatunde"
 
-permalink: /blog/:year/:month/:day/:title
+# This is used by feed.xml. Uncomment if you want to use it.
+description: "This is the personal website of Simeon Babatunde. Here, you'll find the
+              latest information on his research, projects and blog posts."
+
+plugins:
+  - jekyll-sitemap
+  - jemoji
+
+# gems:
+#   - jemoji
+exclude:
+  - "README.md"
+  - "CHANGELOG.md"
+  - "CNAME"
+  - "Gemfile"
+  - "Gemfile.lock"
+permalink: :title
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

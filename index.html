@@ -1,8 +1,102 @@
 ---
-layout: default
-title: Hank Quinlan, Horrible Cop
 ---
-<div class="blurb">
-	<h1>Hi there, I'm Hank Quinlan!</h1>
-	<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-</div><!-- /.blurb -->
+<h2 class="myh2">About Me</h2>
+<p>I am a PhD Student in Computer Science at Clemson University with a demonstrated history of working in the area of
+  IoT, Data Science and Engineering. Skilled in intermittent and ultra-low-power computing for embedded systems,
+  wireless sensor networks, energy harvesting techniques for emerging batteryless devices, and resource-efficient
+  machine learning for embedded and mobile platforms. I work in the <a  href="http://persist.cs.clemson.edu/"  target="_blank">
+  PERSIST Research Laboratory </a> under <a href="https://people.cs.clemson.edu/~jsorber/"  target="_blank">Dr. Jacob Sorber</a>.
+</p>
+
+  <h2 class="myh2">Research Interests</h2>
+  <p>My research lies in the area of <strong>batteryless computing </strong> and <strong>wireless sensor networks</strong>,
+    particularly on investigating efficient communication mechanisms for emerging <strong>battery-free, energy harvesting</strong>
+    devices and sensors that are plagued with frequent power failures and resource constraints. My research interests span the
+    following areas:
+  </p>
+  <ul id="menu">
+    <li>Energy Harvesting</li>
+    <li>Wireless Sensor Networks</li>
+    <li>Embedded Systems & IoT</li>
+    <li>Edge Computing & AI</li>
+    <li>Data Science and Engineering</li>
+</ul>
+
+  <h2 class="myh2">Education</h2>
+  <strong class="mystrong"><p class="compact1">Ph.D. Computer Science</p></strong>
+  <span class="compact">Clemson University, Clemson, SC, USA.</span> <span class="right">2022 (Anticipated)</span>
+  <strong class="mystrong"><p class="compact1">B.Sc. Computer Engineering</p></strong>
+  <span class="compact">Obafemi Awolowo University, Ile Ife, Osun, Nigeria.</span> <span class="right">2014</span>
+  <strong><p class="compact1">OND Electrical and Electronics Engineering</p></strong>
+  <span class="compact">Federal Polytechnic Ilaro, Ogun, Nigeria.</span> <span class="right">2008</span>
+
+  <h2 class="myh2">News</h2>
+  <p class="compact1"><strong class="span_date">(08/2019)</strong>&nbsp I'll be participating in the National Society of
+    Blacks in Computing (NSBC) Conference 2019, Atlanta, GA.</p>
+  <p class="compact1"><strong class="span_date">(03/2019)</strong>&nbsp I was selected to participate in the Computing
+    Research Association <a href="https://www.youtube.com/watch?v=gRB_FY4nM8Q" target="_blank">(CRA) Grad Cohort Workshop</a>
+    in Hawaii, March 2019.</p>
+  <p class="compact1"><strong class="span_date">(08/2018)</strong>&nbsp I'll be going to Northwestern University, Evanston
+    for the <strong>Cross-layer Computing Summer School: Circuits to System 2018</strong> workshop.</p>
+  <p class="compact1"><strong class="span_date">(03/2018)</strong>&nbsp I will be attending the Computing
+    Research Association <a href="https://www.youtube.com/watch?v=Qtyc-1P5n0c" target="_blank">Grad Cohort Workshop</a> in San Diego, California.</p>
+  <p class="compact1"><strong class="span_date">(08/2017)</strong>&nbsp I started my graduate program at
+    Clemson University and joined the PERSIST Research Lab.</p>
+
+  <h2 class="myh2">Recent Projects</h2>
+  <div class="container-fluid" id="myfluid">
+    <div class="row">
+
+      <div class="col-md-6" id="box">
+        <div class="portfolio-details">
+            <h4>Python 2.7.x Interpreter</h4>
+            <img src="/assets/img/interpreter.png" alt="Python Interpreter">
+            <p>
+              In this project, I implemented an interpreter for python 2.7.x using flex (scanner) and bison (parser).
+              The interpreter was written in C/C++ and is capable of interpreting most of Python 2.7.x language constructs.
+            </p>
+            <p class="portfolio-links">
+		            <a href="https://github.com/simeonbabatunde/python2-interpreter" target="_blank">
+	                <i class="fa fa-github"></i>&nbsp;&nbsp;Code </a>
+					 	</p>
+        </div>
+      </div>
+
+      <div class="col-md-6" id="box">
+        <div class="portfolio-details">
+		        <h4>UV Risk Detection/Prevention</h4>
+		        <img src="/assets/img/uv.jpeg" alt="UV Detection">
+		        <p>
+		            This system is a set of wearable devices that inform the user about UV exposure rate. One device
+                senses UV radiation and the other displays the UV radiation levels. The display device shows the UV index.
+		        </p>
+            <p class="portfolio-links">
+		            <a href="https://github.com/simeonbabatunde/uv_risk_detection_and_prevention"  target="_blank">
+	                <i class="fa fa-github"></i>&nbsp;&nbsp;Code </a>
+					 	</p>
+				</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="home-read-more">
+    <a href="{{ "/projects" | prepend:site.baseurl }}" class="btn btn-primary btn-block btn-lg">View All Projects →</a>
+  </div>
+
+<!-- {% for post in site.posts limit:site.data.theme.num_home_posts %}
+<div class="post-header-home">
+  <h1 class="post-title-home">
+    <a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
+  </h1>
+  {% include post-header-home.html %}
+</div>
+<div class="post-excerpt-home">
+  {{ post.excerpt }}
+  <p class="text-right"><a href="{{ post.url | prepend:site.baseurl }}">Continue Reading &rarr;</a></p>
+</div>
+{% endfor %} -->
+<!-- <hr>
+<div class="home-read-more">
+  <a href="{{ "/archive" | prepend:site.baseurl }}" class="btn btn-primary btn-block btn-lg">View All {{ site.posts | size }} Projects →</a>
+</div> -->

@@ -1,0 +1,351 @@
+---
+---
+
+$container-large-desktop: 970px;
+
+$font-family-base: "proxima nova",montserrat,"lucida grande","lucida sans unicode","lucida sans",Geneva,Verdana,sans-serif;
+$headings-font-family: "proxima nova",montserrat,"lucida grande","lucida sans unicode","lucida sans",Geneva,Verdana,sans-serif;
+$headings-font-weight: 500;
+
+$font-size-base: 17px;
+$font-size-h1: floor(($font-size-base * 2));
+$font-size-h2: floor(($font-size-base * 1.3));
+$font-size-h3: floor(($font-size-base * 1));
+$font-size-h4: floor(($font-size-base * 1));
+$font-size-h5: floor(($font-size-base * 1));
+$font-size-h6: floor(($font-size-base * 1));
+$blockquote-font-size: floor(($font-size-base * 1.25));
+$line-height-base: 1.8;
+$headings-line-height: 1.3;
+
+$navbar-default-bg: #fff;
+$navbar-default-border: #fff;
+$navbar-default-brand-color: #333;
+$navbar-height: 45px;
+$navbar-inverse-link-color: #fff;
+$navbar-inverse-toggle-border-color: #fff;
+$navbar-inverse-color: rgba(#fff, 0.75);
+$navbar-inverse-toggle-hover-bg: rgba(#fff, 0.2);
+
+$gray-dark: #555;
+$gray: #888;
+$btn-default-color: #555;
+$gray-light: #aaa;
+
+$brand-primary: #e07280;
+$code-color: #555;
+$code-bg: #f5f5f5;
+$headings-color: #333;
+
+// http://flatuicolors.com/
+$dark: #3d566e;
+$dark-brand-primary: #5b7fa4; // Set saturation to 50
+$turquoise: #1abc9c;
+$green: #2ecc71;
+$blue: #3498db;
+$purple: #9b59b6;
+$orange: #e67e22;
+$red: #e74c3c;
+
+{% unless site.data.theme.color == "default" %}
+  $theme-color: ${{ site.data.theme.color }};
+  $navbar-inverse-bg: $theme-color;
+  @if $theme-color == $dark {
+    $brand-primary: $dark-brand-primary;
+  } @else {
+    $brand-primary: $theme-color;
+  }
+{% endunless %}
+
+@import "custom-bootstrap-variables";
+@import "bootstrap-sass/bootstrap";
+
+$space-xs: $line-height-computed * 1;
+$space-sm: $line-height-computed * 1.5;
+$space-md: $line-height-computed * 2;
+
+h2 {
+  margin-top: $line-height-computed * 0.4;
+  margin-bottom: $line-height-computed * 0.1;
+}
+h3 {
+  margin-top: $line-height-computed * 0.1;
+  margin-bottom: $line-height-computed * 0.25;
+}
+h4.myh4 {
+  margin-top: $line-height-computed * 0.1;
+  margin-bottom: $line-height-computed * 0.25;
+  color: #404950;
+  font-weight: bold;
+}
+h4.compact{
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.lead {
+  @media (min-width: $screen-sm-min) {
+    font-size: $blockquote-font-size;
+  }
+}
+
+.btn {
+  font-family: $headings-font-family;
+}
+
+.section-header {
+  margin-top: 0;
+}
+.section-header-archive {
+  margin-top: 0;
+  text-align: center;
+}
+.section-header-archive ~ .section-header-archive {
+  margin-top: $space-xs;
+}
+
+.post-header {
+  margin-bottom: $space-xs;
+}
+.post-title-home {
+  margin: 0;
+  a {
+    color: inherit;
+  }
+}
+.post-excerpt-home {
+  margin-bottom: $space-md;
+}
+.post-title-main {
+  margin: 0;
+}
+.post-title-archive {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  margin-right: 1em;
+}
+.post-content {
+  margin-bottom: $space-md;
+}
+.post-content img,
+.post-excerpt-home img,
+.post-nav img {
+  @extend .img-responsive;
+}
+.post-footer {
+  border-top: 1px solid $gray-lighter;
+  padding-top: $space-sm;
+  margin-bottom: $space-md;
+}
+.post-navs {
+  margin-bottom: $space-md;
+}
+.post-nav {
+  margin-bottom: $space-sm;
+}
+.post-title-link {
+  margin-top: 0;
+}
+
+.navbar-brand {
+  font-weight: $headings-font-weight;
+}
+.navbar {
+  font-family: $headings-font-family;
+}
+.navbar-static-top {
+  margin-bottom: 0;
+}
+
+.page-archive {
+  margin-bottom: $space-md;
+}
+
+#inner{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer {
+  margin: $space-sm 0 $space-sm;
+  font-size: $font-size-small;
+  color: $gray-light;
+}
+
+.home-read-more {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+.gist {
+  table {
+    border: none !important;
+    width: auto !important;
+  }
+  td {
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    &.line-data {
+      border-right: none !important;
+      line-height: 1.4 !important;
+    }
+  }
+}
+
+@media(max-width: $screen-xs-max) {
+  .navbar-header {
+    text-align: center;
+  }
+  .navbar-brand {
+    display: inline-block;
+    float: none;
+  }
+  .navbar-toggle-wrapper {
+    position: absolute;
+    left: $navbar-padding-horizontal;
+    height: ($navbar-height + 34px) / 2;
+  }
+}
+
+.mainbg{
+  background-color: #f4f4f4;
+}
+
+#contain{
+  background-color: #fff;
+  // border-left: 3px #cacaca;
+  // border-right: 3px #cacaca;
+  padding-top: 1.4em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+.myh2{
+  font-weight: 505;
+  color: #404950;
+  margin-top: 1em;
+}
+.mhov a:hover{
+font-weight:bold;
+text-decoration:none;
+// border-bottom:1px solid #ccc;
+}
+
+p{
+  // text-align: justify;
+  // text-justify: inter-word;
+  font-size: 0.92em;
+}
+
+p.compact{
+  // text-align: justify;
+  // text-justify: inter-word;
+  font-size: 0.92em;
+  margin-top: 0;
+  margin-bottom: 0;
+  font: $font-family-base;
+}
+
+p.compact1{
+  // text-align: justify;
+  // text-justify: inter-word;
+  font-size: 0.92em;
+  margin-top: 0.7em;
+  margin-bottom: 0;
+}
+
+p.right{
+  font-size: 0.92em;
+  margin-top: 0;
+  margin-bottom: 0;
+  float: right;
+}
+
+span.compact{
+  // text-align: justify;
+  // text-justify: inter-word;
+  font-size: 0.92em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+span.right{
+  font-size: 0.92em;
+  margin-top: 0;
+  margin-bottom: 0;
+  float: right;
+}
+
+hr.myline {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    // border-style: inset;
+    height: 0.03em;
+    color: #404950;
+    background-color:#404950;
+}
+
+span.right{
+  float: right;
+}
+
+.span_date{
+  color: #404950;
+}
+
+.portfolio-details{
+    border: 1px solid #D1D1D1;
+    padding: 12px 12px 10px 12px;
+}
+
+.portfolio-details > h4 + img {
+    margin-top: 7px;
+    margin-bottom: 5px;
+}
+
+img {
+    width: auto\9;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+#box{
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
+#myfluid{
+  margin-top: 0.8em;
+}
+#container_row{
+  margin-top: 0.7em;
+}
+
+.text-muted{
+  font-size: 0.85em;
+}
+
+.blogtitle{
+  text-align:center;
+  margin-top: 0;
+}
+.postcenter{
+  text-align: center;
+}
+
+.my-info{
+  font: $font-family-base;
+}
+
+.menu{
+  font-size: 17px;
+  font: $font-family-base;
+}
+
+
+@import "custom-scss";
